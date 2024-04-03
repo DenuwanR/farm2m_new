@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Set the message
         //$message = "New record created successfully";
         //echo "New record created successfully";
-       // echo "<script>alert('$message');</script>";
+        // echo "<script>alert('$message');</script>";
         // Display alert message using JavaScript
         echo "<script>alert('Signup successful');</script>";
         header("Location: sign-in.html");

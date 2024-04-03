@@ -3,7 +3,8 @@
 // Example: include 'db_connection.php';
 
 // Function to fetch data from the signup table
-function fetchSignupData() {
+function fetchSignupData()
+{
     // Establish database connection
     $conn = new mysqli("localhost", "root", "root", "users");
 

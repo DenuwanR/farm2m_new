@@ -57,11 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["profile_photo"])) {
             $sql = "UPDATE signup SET profile_photo = ? WHERE firstName = ? AND lastName = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sss", $file_path, $firstName, $lastName);
-            
+
             if ($stmt->execute()) {
                 // Update the $profile_photo variable
                 $profile_photo = $file_path;
-                
+
                 // File path inserted successfully
                 header("Location: accountSettingPage.php"); // Redirect to profile page or wherever you want
                 exit();

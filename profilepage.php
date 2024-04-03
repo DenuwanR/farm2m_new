@@ -6,12 +6,12 @@ $username = "root";
 $password = "";
 $dbname = "project";
 // Create connection
-$conn = mysqli_connect($servername, $username, $password,$dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 if ($conn) {
 
-   
+
 
     $login_stid = $_POST['stid'];
     $login_password = $_POST['password'];
@@ -24,19 +24,18 @@ if ($conn) {
     $login_result = $login_stmt->get_result();
 
     if ($login_result->num_rows > 0) {
-        
+
         session_start();
         $_SESSION['stid'] = $login_stid; // Store user ID in session
         header("Location: profilepage.php");
- 
+
 
         exit();
 
-        $login_stmt-> close();
-        $conn-> close();
+        $login_stmt->close();
+        $conn->close();
 
-    }
-    else{
+    } else {
 
         echo "invalid user or pass";
     }

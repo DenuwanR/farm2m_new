@@ -1,6 +1,6 @@
 <?php
 // Include your database connection file here
-    include 'connection.php';
+include 'connection.php';
 
 // Check if the user ID is set and not empty
 if (isset($_GET['id']) && !empty($_GET['id'])) {
